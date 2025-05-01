@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="15dp"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/recordAudioBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Record Audio" />
+    <Button
+        android:id="@+id/playAudioBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Play Audio"
+        android:layout_marginTop="8dp" />
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp" />
+    <Button
+        android:id="@+id/recordVideoBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Record Video"
+        android:layout_marginTop="8dp" />
+    <Button
+        android:id="@+id/playVideoBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Play Video"
+        android:layout_marginTop="8dp" />
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:text="220760116050"/>
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity2"
+    android:gravity="center">
+
+
+
+
+    <TextView
+        android:id="@+id/txtssasit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:text="Shree Swami Atmanad Saraswati Institute Of Technology"
+        android:textSize="15sp" />
+
+
+    <ImageView
+        android:id="@+id/imglogo"
+        android:layout_width="wrap_content"
+        android:layout_height="135dp"
+        app:srcCompat="@drawable/ssasit_logo"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:text="220760116050"
+        android:textSize="15sp" />
+
+
+    <!--    amount input-->
+
+    <EditText
+        android:id="@+id/amtInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Amount"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/fromCurrencySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:minHeight="48dp"/>
+
+    <Spinner
+        android:id="@+id/toCurrencySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:minHeight="48dp"/>
+
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="197dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Convert" />
+
+    <TextView
+        android:id="@+id/resultView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginTop="24dp"/>
+
+
+</LinearLayout>

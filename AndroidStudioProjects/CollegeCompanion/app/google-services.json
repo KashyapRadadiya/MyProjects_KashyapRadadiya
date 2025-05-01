@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "139851343741",
+    "project_id": "college-companion-32547",
+    "storage_bucket": "college-companion-32547.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139851343741:android:57f7a2e7a1e8e14f240e14",
+        "android_client_info": {
+          "package_name": "com.kashyap.collegecompanion"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxtQ8srsy68hOXQeYeYKrzerUQKmL7pzc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity3">
+
+
+    <!--  Toolbar  -->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar" />
+
+
+    <TextView
+        android:id="@+id/txtssasit"
+        android:layout_width="388dp"
+        android:layout_height="31dp"
+        android:text="Shree Swami Atmanad Saraswati Institute Of Technology"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:layout_marginTop="5dp"/>
+
+    <!-- logo -->
+    <ImageView
+        android:id="@+id/imglogo"
+        android:layout_width="402dp"
+        android:layout_height="80dp"
+        app:srcCompat="@drawable/ssasit_logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="220760116050"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/duedatelable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Due Date"
+        android:textSize="18sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="center"/>
+
+    <DatePicker
+        android:id="@+id/duedatepicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/calculatebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate Overdue Days"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/resulttextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_gravity="center"/>
+
+
+
+</LinearLayout>

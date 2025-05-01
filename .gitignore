@@ -1,0 +1,84 @@
+####################################
+# Node.js / Web Projects
+####################################
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.env
+dist/
+build/
+coverage/
+.next/
+.out/
+
+####################################
+# Python Projects (venv, pipenv)
+####################################
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.egg-info/
+.eggs/
+venv/
+ENV/
+env/
+env.bak/
+Pipfile.lock
+
+####################################
+# Android / Java / Kotlin Projects
+####################################
+.gradle/
+build/
+.idea/
+*.iml
+*.apk
+local.properties
+*.log
+captures/
+*.cxx/
+.externalNativeBuild/
+.cxx/
+*.keystore
+*.jks
+
+####################################
+# macOS & Windows OS junk
+####################################
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+####################################
+# IDEs / Editors (VSCode, IntelliJ, etc.)
+####################################
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+####################################
+# Logs and temp files
+####################################
+*.log
+logs/
+*.tmp
+*.bak
+
+####################################
+# Misc
+####################################
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.rar
+*.class
