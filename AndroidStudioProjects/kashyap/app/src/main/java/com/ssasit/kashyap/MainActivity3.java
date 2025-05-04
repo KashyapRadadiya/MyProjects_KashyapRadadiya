@@ -29,15 +29,14 @@ public class MainActivity3 extends AppCompatActivity {
     private Toolbar tb;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
-        // Toolbar
         tb = findViewById(R.id.toolbar);
         setSupportActionBar(tb);
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
 
         // UI components
         duedatepicker = findViewById(R.id.duedatepicker);
@@ -52,40 +51,6 @@ public class MainActivity3 extends AppCompatActivity {
            }
        });
 
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-
-        MenuInflater mnu = getMenuInflater();
-        mnu.inflate(R.menu.menu,menu);
-
-        // return super.onCreateOptionsMenu(menu);
-        return true;
-
-    }
-
-    // to create menubar
-
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        if (item.getItemId()==R.id.menu1){
-            // Toast.makeText(this, "Menu 1 selected", Toast.LENGTH_SHORT).show();
-            Intent i = new Intent(this,MainActivity.class);
-            startActivity(i);
-        } else if (item.getItemId()==R.id.menu2) {
-            // Toast.makeText(this, "Menu 2 selected", Toast.LENGTH_SHORT).show();
-            Intent i = new Intent(this,MainActivity2.class);
-            startActivity(i);
-        } else if (item.getItemId()==R.id.menu3) {
-            // Toast.makeText(this, "Menu 2 selected", Toast.LENGTH_SHORT).show();
-            Intent i = new Intent(this,MainActivity3.class);
-            startActivity(i);
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
 
@@ -118,6 +83,38 @@ public class MainActivity3 extends AppCompatActivity {
             resulttextview.setText("No Overdue. Book is due in "+Math.abs(daysDifference)+" Days.");
         }
 
-
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater mnu = getMenuInflater();
+        mnu.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.menu1) {
+            Intent i = new Intent(this, MainActivity.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.menu2) {
+            Intent i = new Intent(this, MainActivity2.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.menu3) {
+            Intent i = new Intent(this, MainActivity3.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.menu4) {
+            Intent i = new Intent(this, MainActivity5.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.menu5) {
+            Intent i = new Intent(this, MainActivity4.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.menu6) {
+            Intent i = new Intent(this, MainActivity6.class);
+            startActivity(i);
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 }

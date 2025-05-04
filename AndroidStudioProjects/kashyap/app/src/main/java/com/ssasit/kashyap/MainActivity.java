@@ -5,6 +5,12 @@ import android.view.View;
 import android.widget.*;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,11 +18,16 @@ public class MainActivity extends AppCompatActivity {
     double n1 = 0, n2 = 0;
     String op = "";
     boolean opset = false;
+    private Toolbar tb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        tb = findViewById(R.id.toolbar);
+        setSupportActionBar(tb);
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
 
         tvdisplay = findViewById(R.id.tvdisplay);
         setButtonListeners();
@@ -108,6 +119,37 @@ public class MainActivity extends AppCompatActivity {
         }
 
         tvdisplay.setText(String.valueOf(result));
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.menu1) {
+            Intent i = new Intent(this, MainActivity.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.menu2) {
+            Intent i = new Intent(this, MainActivity2.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.menu3) {
+            Intent i = new Intent(this, MainActivity3.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.menu4) {
+            Intent i = new Intent(this, MainActivity5.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.menu5) {
+            Intent i = new Intent(this, MainActivity4.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.menu6) {
+            Intent i = new Intent(this, MainActivity6.class);
+            startActivity(i);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

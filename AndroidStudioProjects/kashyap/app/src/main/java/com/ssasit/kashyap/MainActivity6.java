@@ -1,10 +1,14 @@
 package com.ssasit.kashyap;
 
+import android.content.Intent;
 import android.hardware.Camera;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.widget.Button;
@@ -14,6 +18,7 @@ import android.widget.VideoView;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -38,12 +43,18 @@ public class MainActivity6 extends AppCompatActivity implements
     private String audioPath;
     private String videoPath;
     private static final int PERMISSIONS_REQUEST = 100;
+    private Toolbar tb;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main6);
+
+        tb = findViewById(R.id.toolbar);
+        setSupportActionBar(tb);
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
+
         audioPath = new File(getExternalFilesDir(null),
                 "recorded_audio.m4a").getAbsolutePath();
         videoPath = new File(getExternalFilesDir(null),
@@ -209,4 +220,39 @@ public class MainActivity6 extends AppCompatActivity implements
         if (mediaPlayer != null) {
             mediaPlayer.release();
             mediaPlayer = null;
-        }}}
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater mnu = getMenuInflater();
+        mnu.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.menu1) {
+            Intent i = new Intent(this, MainActivity.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.menu2) {
+            Intent i = new Intent(this, MainActivity2.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.menu3) {
+            Intent i = new Intent(this, MainActivity3.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.menu4) {
+            Intent i = new Intent(this, MainActivity5.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.menu5) {
+            Intent i = new Intent(this, MainActivity4.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.menu6) {
+            Intent i = new Intent(this, MainActivity6.class);
+            startActivity(i);
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
+}

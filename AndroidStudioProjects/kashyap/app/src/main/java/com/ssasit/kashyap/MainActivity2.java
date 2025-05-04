@@ -1,6 +1,10 @@
 package com.ssasit.kashyap;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -10,29 +14,22 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity2 extends AppCompatActivity {
-
     private EditText amountInput;
-
     private Spinner fromCurrencySpinner , toCurrencySpinner;
-
     private TextView resultView;
-
     private Button convertButton;
-
     private final double USD_TO_INR = 87.15;
-
-
     private final double INR_TO_USD = 1 / USD_TO_INR ;
-
     private final double EUR_TO_INR  = 94.24;
-
-
+    private Toolbar tb;
     private final double INR_TO_EUR  = 1 / EUR_TO_INR;
     private final double EUR_TO_USD = 1.08;
     private final double USD_TO_EUR  = 1 / EUR_TO_USD;
@@ -46,6 +43,10 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+        tb = findViewById(R.id.toolbar);
+        setSupportActionBar(tb);
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
 
         amountInput = findViewById(R.id.amtInput);
         fromCurrencySpinner  = findViewById(R.id.fromCurrencySpinner);
@@ -99,5 +100,37 @@ public class MainActivity2 extends AppCompatActivity {
             return amount * EUR_TO_USD;
         }
         return amount;
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater mnu = getMenuInflater();
+        mnu.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.menu1) {
+            Intent i = new Intent(this, MainActivity.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.menu2) {
+            Intent i = new Intent(this, MainActivity2.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.menu3) {
+            Intent i = new Intent(this, MainActivity3.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.menu4) {
+            Intent i = new Intent(this, MainActivity5.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.menu5) {
+            Intent i = new Intent(this, MainActivity4.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.menu6) {
+            Intent i = new Intent(this, MainActivity6.class);
+            startActivity(i);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

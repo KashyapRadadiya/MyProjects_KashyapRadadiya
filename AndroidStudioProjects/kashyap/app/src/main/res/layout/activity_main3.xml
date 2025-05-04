@@ -8,36 +8,29 @@
     android:orientation="vertical"
     tools:context=".MainActivity3">
 
-
-    <!--  Toolbar  -->
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/toolbar" />
-
+        app:title="Menu" />
 
     <TextView
         android:id="@+id/txtssasit"
         android:layout_width="388dp"
         android:layout_height="31dp"
         android:text="Shree Swami Atmanad Saraswati Institute Of Technology"
-        android:textSize="12sp"
+        android:textSize="14sp"
         android:gravity="center"
         android:layout_marginTop="5dp"/>
 
-    <!-- logo -->
-    <ImageView
-        android:id="@+id/imglogo"
-        android:layout_width="402dp"
-        android:layout_height="80dp"
-        app:srcCompat="@drawable/ssasit_logo" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="220760116050"
-        android:textSize="15sp"
+        android:textSize="25sp"
         android:gravity="center"
         android:layout_marginTop="5dp"/>
 

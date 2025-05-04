@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:title="Calculator"
         android:id="@+id/menu1"/>
@@ -10,5 +9,9 @@
         android:id="@+id/menu3"/>
     <item android:title="RotatingBall"
         android:id="@+id/menu4"/>
+    <item android:title="MapTracker"
+        android:id="@+id/menu5"/>
+    <item android:title="Recorder"
+        android:id="@+id/menu6"/>
 
 </menu>

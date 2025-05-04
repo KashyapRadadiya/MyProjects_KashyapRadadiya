@@ -1,12 +1,17 @@
 package com.ssasit.kashyap;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -33,11 +38,16 @@ public class MainActivity4 extends AppCompatActivity implements OnMapReadyCallba
     private List<LatLng> routePoints = new ArrayList<>();
     private static final int LOCATION_PERMISSION_CODE = 101;
     private LocationCallback locationCallback;
+    private Toolbar tb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
+
+        tb = findViewById(R.id.toolbar);
+        setSupportActionBar(tb);
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
@@ -124,5 +134,35 @@ public class MainActivity4 extends AppCompatActivity implements OnMapReadyCallba
         }
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater mnu = getMenuInflater();
+        mnu.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.menu1) {
+            Intent i = new Intent(this, MainActivity.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.menu2) {
+            Intent i = new Intent(this, MainActivity2.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.menu3) {
+            Intent i = new Intent(this, MainActivity3.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.menu4) {
+            Intent i = new Intent(this, MainActivity5.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.menu5) {
+            Intent i = new Intent(this, MainActivity4.class);
+            startActivity(i);
+        } else if (item.getItemId() == R.id.menu6) {
+            Intent i = new Intent(this, MainActivity6.class);
+            startActivity(i);
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
 }

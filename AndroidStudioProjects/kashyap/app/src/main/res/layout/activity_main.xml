@@ -5,57 +5,59 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:title="Menu" />
 
     <!-- SSASIT -->
 
     <TextView
         android:id="@+id/txtssasit"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginTop="8dp"
         android:text="Shree Swami Atmanad Saraswati Institute Of Technology"
         android:textSize="15sp" />
 
-    <!-- logo -->
-
-
-    <!-- Display -->
+    <!-- Logo -->
 
     <ImageView
         android:id="@+id/imglogo"
         android:layout_width="wrap_content"
         android:layout_height="135dp"
-        app:srcCompat="@drawable/ssasit_logo"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginBottom="20dp"
+        app:srcCompat="@drawable/ssasit_logo" />
+
 
     <TextView
         android:id="@+id/tvdisplay"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:background="@android:color/darker_gray"
         android:gravity="end"
         android:text=""
         android:textColor="@android:color/white"
-        android:textSize="32sp" />
-
+        android:textSize="32sp"
+         />
 
     <GridLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:alignmentMode="alignMargins"
         android:columnCount="4"
         android:rowCount="5"
-        android:layout_gravity="center"
-        >
-
+        android:layout_gravity="center">
 
         <Button
             android:id="@+id/btnac"
@@ -180,18 +182,17 @@
 
             android:text="=" />
 
-
     </GridLayout>
-
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center"
+        android:layout_gravity="center"
         android:text="220760116050"
         android:textSize="20dp" />
 
-
 </LinearLayout>
+

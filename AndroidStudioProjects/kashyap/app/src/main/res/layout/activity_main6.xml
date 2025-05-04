@@ -2,49 +2,61 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginTop="15dp"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/recordAudioBtn"
+    <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:layout_marginTop="40dp"
+        app:title="Menu"/>
+
+    <Button
+        android:id="@+id/recordAudioBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="Record Audio" />
     <Button
         android:id="@+id/playAudioBtn"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Play Audio"
-        android:layout_marginTop="8dp" />
+        android:layout_gravity="center"
+        android:layout_marginTop="3dp" />
     <SurfaceView
         android:id="@+id/surfaceView"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="3dp" />
     <Button
         android:id="@+id/recordVideoBtn"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="Record Video"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="3dp" />
     <Button
         android:id="@+id/playVideoBtn"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="Play Video"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="3dp" />
     <VideoView
         android:id="@+id/videoView"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="3dp" />
 
     <TextView
         android:id="@+id/txt2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textSize="20dp"
+        android:textSize="30dp"
         android:text="220760116050"/>
 
 </LinearLayout>
