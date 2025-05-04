@@ -15,6 +15,7 @@ import com.kashyap.collegecompanion.R;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import com.google.android.material.button.MaterialButton;
 
 public class NoticeBoardActivity extends AppCompatActivity {
 
@@ -22,7 +23,7 @@ public class NoticeBoardActivity extends AppCompatActivity {
     private NoticeAdapter adapter;
     private ArrayList<Notice> noticeList = new ArrayList<>();
     private FirebaseFirestore db;
-    private ImageButton addNoticeButton;
+    private MaterialButton addNoticeButton; // <-- Changed from ImageButton to MaterialButton
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +31,7 @@ public class NoticeBoardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_notice_board);
 
         recyclerView = findViewById(R.id.noticeRecyclerView);
-        addNoticeButton = findViewById(R.id.addNoticeButton);
+        addNoticeButton = findViewById(R.id.addNoticeButton); // This now matches the MaterialButton in XML
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new NoticeAdapter(noticeList);
         recyclerView.setAdapter(adapter);

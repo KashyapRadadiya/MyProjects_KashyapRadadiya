@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.kashyap.collegecompanion.R;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -21,7 +21,7 @@ public class TodoAssignmentAdapter extends RecyclerView.Adapter<TodoAssignmentAd
     private ArrayList<TodoAssignment> todoList;
     private boolean isAdmin;
 
-    public TodoAssignmentAdapter(ArrayList<TodoAssignment> todoList) {
+    public TodoAssignmentAdapter(ArrayList<TodoAssignment> todoList, TodoAssignmentActivity todoAssignmentActivity) {
         this.todoList = todoList;
         String email = FirebaseAuth.getInstance().getCurrentUser() != null ? FirebaseAuth.getInstance().getCurrentUser().getEmail() : "";
         this.isAdmin = email != null && email.endsWith("@admin.com");

@@ -17,6 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.*;
 import com.kashyap.collegecompanion.MaterialAdapter; // Add this import
 import com.kashyap.collegecompanion.R;
+import com.google.android.material.button.MaterialButton;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -27,7 +28,7 @@ public class MaterialsActivity extends AppCompatActivity {
     private MaterialAdapter adapter;
     private ArrayList<Material> materialList = new ArrayList<>();
     private FirebaseFirestore db;
-    private ImageButton addMaterialButton;
+    private MaterialButton addMaterialButton; // <-- Changed from ImageButton to MaterialButton
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +36,7 @@ public class MaterialsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_materials);
 
         recyclerView = findViewById(R.id.materialRecyclerView);
-        addMaterialButton = findViewById(R.id.addMaterialButton);
+        addMaterialButton = findViewById(R.id.addMaterialButton); // This now matches the MaterialButton in XML
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new MaterialAdapter(materialList, this); // Use external adapter and pass context
         recyclerView.setAdapter(adapter);

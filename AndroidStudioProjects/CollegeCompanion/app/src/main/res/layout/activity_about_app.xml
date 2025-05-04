@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="?android:attr/windowBackground">
 
     <LinearLayout
         android:orientation="vertical"
@@ -10,24 +12,55 @@
         android:padding="24dp"
         android:gravity="center_horizontal">
 
-        <TextView
-            android:id="@+id/aboutTitle"
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="             About\nCollege Companion"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:layout_marginTop="100dp"
-            android:layout_marginBottom="16dp"/>
+            android:layout_gravity="center"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="48dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="10dp"
+            app:cardBackgroundColor="@color/white">
 
-        <TextView
-            android:id="@+id/aboutContent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="College Companion is an all-in-one app for students and faculty to manage timetables, attendance, exams, notices, assignments, and materials.\n\nDeveloped by:\n- Kashyap Radadiya \n\nFor:\n- MAD Subject of B.E. \n\nVersion: 1.7.0"
-            android:textSize="16sp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="38dp"
+                android:gravity="center_horizontal">
 
+                <ImageView
+                    android:id="@+id/aboutLogo"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:src="@drawable/ssasit_logo"
+                    android:background="@drawable/circle_bg"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:elevation="4dp"/>
+
+                <TextView
+                    android:id="@+id/aboutTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About College Companion"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:id="@+id/aboutContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="College Companion is an all-in-one app for students and faculty to manage timetables, attendance, exams, notices, assignments, and materials.\n\nDeveloped by:\nKashyap Radadiya\n\nFor:\nMAD Subject of B.E.\n\nVersion: 1.7.0"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_marginBottom="8dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
 </ScrollView>

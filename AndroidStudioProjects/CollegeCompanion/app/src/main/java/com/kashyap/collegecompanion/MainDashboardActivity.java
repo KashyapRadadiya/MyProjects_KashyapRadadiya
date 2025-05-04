@@ -10,7 +10,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
+import com.google.android.material.button.MaterialButton;
 import androidx.appcompat.app.AppCompatActivity;
 import com.kashyap.collegecompanion.R;
 
@@ -21,12 +21,12 @@ public class MainDashboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_dashboard);
 
-        Button materialsButton = findViewById(R.id.materialsButton);
-        Button attendanceButton = findViewById(R.id.attendanceButton);
-        Button examButton = findViewById(R.id.examButton);
-        Button noticeButton = findViewById(R.id.noticeButton);
-        Button todoButton = findViewById(R.id.todoButton);
-        Button aboutAppButton = findViewById(R.id.aboutAppButton);
+        MaterialButton materialsButton = findViewById(R.id.materialsButton);
+        MaterialButton attendanceButton = findViewById(R.id.attendanceButton);
+        MaterialButton examButton = findViewById(R.id.examButton);
+        MaterialButton noticeButton = findViewById(R.id.noticeButton);
+        MaterialButton todoButton = findViewById(R.id.todoButton);
+        MaterialButton aboutAppButton = findViewById(R.id.aboutAppButton);
 
 
         materialsButton.setOnClickListener(v -> {

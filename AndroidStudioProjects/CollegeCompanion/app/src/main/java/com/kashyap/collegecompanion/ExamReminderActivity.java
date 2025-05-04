@@ -9,6 +9,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.*;
 import com.kashyap.collegecompanion.R;
@@ -22,7 +24,7 @@ public class ExamReminderActivity extends AppCompatActivity {
     private ExamReminderAdapter adapter;
     private ArrayList<ExamReminder> reminderList = new ArrayList<>();
     private FirebaseFirestore db;
-    private ImageButton addReminderButton;
+    private MaterialButton addReminderButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -14,6 +14,7 @@ import com.kashyap.collegecompanion.R;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import com.google.android.material.button.MaterialButton;
 
 public class TodoAssignmentActivity extends AppCompatActivity {
 
@@ -21,7 +22,7 @@ public class TodoAssignmentActivity extends AppCompatActivity {
     private TodoAssignmentAdapter adapter;
     private ArrayList<TodoAssignment> todoList = new ArrayList<>();
     private FirebaseFirestore db;
-    private ImageButton addTodoButton;
+    private MaterialButton addTodoButton; // <-- Changed from ImageButton to MaterialButton
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +30,9 @@ public class TodoAssignmentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_todo_assignment);
 
         recyclerView = findViewById(R.id.todoRecyclerView);
-        addTodoButton = findViewById(R.id.addTodoButton);
+        addTodoButton = findViewById(R.id.addTodoButton); // This now matches the MaterialButton in XML
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new TodoAssignmentAdapter(todoList);
+        adapter = new TodoAssignmentAdapter(todoList, this);
         recyclerView.setAdapter(adapter);
 
         db = FirebaseFirestore.getInstance();
